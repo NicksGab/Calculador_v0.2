@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: #0e013b;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 800px;
+}
+
+.hide {
+  opacity: 0;
+  z-index: -15;
+}
+
+/*
+================================
+        Parte da Tela
+================================
+*/
+
+section #tela {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(47, 9, 82), rgb(83, 18, 145), rgb(91, 20, 158));
+  width: 420px;
+  height: 100px;
+  border-radius: 30px 30px 0 0;
+  border: 1px solid rgb(31, 5, 46);
+  z-index: 1;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 150px;
+  transform: translate3d(200px,-190px,0px);
+  background: linear-gradient(to right,rgb(42, 8, 73), rgb(22, 2, 41));
+  border-radius: 0px 50px 0 0;
+  z-index: -1;
+}
+
+section #tela span {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  font-size: 32px;
+  padding-right: 10px;
+  background: linear-gradient(to right, rgb(0,30,0), rgb(0,60,0));
+  width: 333px;
+  height: 35px;
+  border: 5px solid rgb(0,10,0);
+  overflow: hidden;
+}
+
+section #tela span::selection {
+  background: rgb(219, 8, 219);
+  color: #f5f5f5;
+}
+/*
+================================
+        Parte dos Botões
+================================
+*/
+
+section #botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  direction: rtl;
+  background: linear-gradient(to bottom right, rgb(47, 9, 82), rgb(83, 18, 145), rgb(91, 20, 158));
+  width: 420px;
+  height: 430px;
+  border-radius: 0 0 30px 30px;
+  border: 1px solid rgb(31, 5, 46);
+  z-index: 1;
+  user-select: none;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 435px;
+  height: 430px;
+  transform: translate3d(10px,65px,0px);
+  background: linear-gradient(to right,rgb(42, 8, 73), rgb(22, 2, 41));
+  border-radius: 0px 0px 40px 40px;
+  z-index: -1;
+}
+
+section #botoes .btn {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  margin: 15px 7px;
+  background: linear-gradient(to bottom right, rgb(71, 12, 105), rgb(164, 29, 241));
+  box-shadow: 4px 4px 2px rgb(31, 5, 46);
+  border: none;
+}
+
+section #botoes .btnEspecial {
+  background: linear-gradient(to bottom right, rgb(71, 44, 8), rgb(199, 96, 12));
+}
+
+section #botoes #btnI,section #botoes #btnC {
+  background: linear-gradient(to bottom right, rgb(102, 4, 4), rgb(216, 5, 5));
+}
+
+section #botoes .btn:active {
+  transform: translate3d(4px,4px,0px);
+  box-shadow: -1px -1px 2px rgb(31, 5, 46);
+  border: 3px solid rgb(31, 5, 46);
+}
+
+/*
+================================
+        Operações Temp
+================================
+*/
+
+#operacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 300px;
+  background: #1a0077;
+  box-shadow: 0px -30px 80px rgb(106, 0, 206);
+  animation: pulse 6s linear infinite;
+}
+
+@keyframes pulse {
+  50% {
+    
+  box-shadow: 0px -0px 30px rgb(106, 0, 206);
+  }
+}
+
+#containerOperadores {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(106, 0, 206);
+  width: 100%;
+}
+
+#textOperadores {
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+#operadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+#operadores button {
+  width: 100px;
+  height: 50px;
+  margin: 0px 30px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  background: linear-gradient(to bottom right, rgb(71, 12, 105), rgb(164, 29, 241));
+  box-shadow: 4px 4px 2px rgb(31, 5, 46);
+  border: none;
+}
+
+#operadores button:active {
+  transform: translate3d(4px,4px,0px);
+  box-shadow: -1px -1px 2px rgb(31, 5, 46);
+  border: 3px solid rgb(31, 5, 46);
+}
+
+#operadores button:hover {
+  background: rgb(180, 64, 247);
+  box-shadow: 4px 4px 2px rgb(137, 21, 204);
+}

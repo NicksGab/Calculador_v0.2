@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora v0.1</title>
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+  </head>
+  <body>
+    <section id="calculadora">
+      <div id="tela">
+        <span id="nmr">0</span>
+      </div>
+      <div id="botoes">
+        <div class="btns-0"></div>
+        <div class="btns-1">
+          <button id="btnX" class="btn btnEspecial" value="*">*</button>
+          <button id="btn9" class="btn" value="9">9</button>
+          <button id="btn8" class="btn" value="8">8</button>
+          <button id="btn7" class="btn" value="7">7</button>
+        </div>
+        <div class="btns-2">
+          <button id="btnD" class="btn btnEspecial" value="/">/</button>
+          <button id="btn6" class="btn" value="6">6</button>
+          <button id="btn5" class="btn" value="5">5</button>
+          <button id="btn4" class="btn" value="4">4</button>
+        </div>
+        <div class="btns-3">
+          <button id="btnMenos" class="btn btnEspecial" value="-">-</button>
+          <button id="btn3" class="btn" value="3">3</button>
+          <button id="btn2" class="btn" value="2">2</button>
+          <button id="btn1" class="btn" value="1">1</button>
+        </div>
+        <div class="btns-4">
+          <button id="btnMais" class="btn btnEspecial" value="+">+</button>
+          <button id="btnI" class="btn" value="=">=</button>
+          <button id="btn0" class="btn" value="0">0</button>
+          <button id="btnC" class="btn" value="Limpar">C</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="operacoes">
+      <div id="containerOperadores">
+        <div id="textOperadores">
+          <p><i><u>temporário</u></i></p>
+          <h1>Escolha qual tipo de opereção você deseja.</h1>
+        </div>
+        <div id="operadores">
+          <button onclick="somar()">Somar</button>
+          <button onclick="subtrair()">Subtrair</button>
+          <button onclick="multiplicar()">Multiplicar</button>
+          <button onclick="dividir()">Dividir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/JS/script.js"></script>
+  </body>
+</html>
